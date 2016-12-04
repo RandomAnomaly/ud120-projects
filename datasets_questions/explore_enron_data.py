@@ -19,4 +19,15 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+count = 0
 
+for key in enron_data:
+    if enron_data[key]["poi"] == 1:
+        count+=1
+
+print "Number of POIs in final_project_dataset.pkl: %s" % count
+
+poi_names = open("../final_project/poi_names.txt").readlines()
+del poi_names[0:2]
+poi_names = [x.strip('\n') for x in poi_names]
+print "Number of POIs in poi_names.txt: %s" % len(poi_names)
