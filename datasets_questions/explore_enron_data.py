@@ -31,3 +31,9 @@ poi_names = open("../final_project/poi_names.txt").readlines()
 del poi_names[0:2]
 poi_names = [x.strip('\n') for x in poi_names]
 print "Number of POIs in poi_names.txt: %s" % len(poi_names)
+
+print "Total stock value owned by James Prentice: %s" % enron_data["PRENTICE JAMES"]["total_stock_value"]
+
+print "Total emails from Wesley Colwell to POIs: %s" % enron_data["COLWELL WESLEY"]["from_this_person_to_poi"]
+
+print "Stock options exercised by Jeffrey K Skilling: %s" % enron_data["SKILLING JEFFREY K"]["exercised_stock_options"]
